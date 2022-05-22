@@ -30,7 +30,7 @@
         >
         <nav class="navigation">
           <ul class="navigation-list items">
-            <li class="link link-items">
+            <li class="link link-items-current">
               <a class="site-nav navigation-link" href="./index.html">Студия</a>
             </li>
             <li class="link link-items">
@@ -67,7 +67,17 @@
       <section class="hero">
         <div class="container-hero">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="btn-hero" type="button">Заказать услугу</button>
+          <button class="btn-hero" type="button" data-modal-open>Заказать услугу</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal-wrapper">
+              <button class="modal-btn" data-modal-close>
+                <svg class="modal-icon" width='11' height='11'>
+                  <use href='./images/hero/closesvg/symbol-defs.svg#icon-xmark-solid'>
+                  </use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <!--Особенности-->
@@ -132,12 +142,8 @@
           <h2 class="subject subtitles-work">Чем мы занимаемся</h2>
           <ul class="link-special">
             <li class="link list-work">
-              <img
-                class="img"
-                src="./images/img-1.jpg"
-                alt="Набора кода на компьютере"
-                width="370"
-              />
+              <img class="img"src="./images/img-1.jpg"alt="Набора кода на компьютере" width="370"/>
+              <p class="work">Десктопные приложения</p>
             </li>
             <li class="link list-work">
               <img
@@ -145,6 +151,7 @@
                 src="./images/img-2.jpg"
                 alt="Выбор меню для телефона на компьютере width370"
               />
+              <p class="work ">Мобильные приложения</p>
             </li>
             <li class="link list-work">
               <img
@@ -153,6 +160,7 @@
                 alt="Цветовая палитра на графическом планшете"
                 width="370"
               />
+              <p class="work">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -601,5 +609,6 @@
       </div>
       
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
